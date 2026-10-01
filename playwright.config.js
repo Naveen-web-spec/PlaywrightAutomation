@@ -35,7 +35,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    headless: false,
+    headless: !!process.env.CI,
     browserName: 'chromium',
     actionTimeout: 10_000 ,  // For each action global waits click, check , fill
     navigationTimeout: 20_000 //Global wait for Navigation
