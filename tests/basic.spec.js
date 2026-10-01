@@ -61,6 +61,7 @@ test('Select event', async ({page})=>{
   const option= page.locator("[class*='w-full']").nth(1)
   console.log(await option.allTextContents())
   await option.selectOption('Sports')
+  await expect(true).toBeFalsy()
 })
 
 test('checkbox' , async ({ page })=>{
