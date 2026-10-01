@@ -42,7 +42,7 @@ jobs:
         run: |
           npx playwright test --config=playwright.config.js --workers=4 \
             --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }} \
-            --report=blob
+            --reporter=blob
       - name: Upload blob report to GitHub Actions Artifacts
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
