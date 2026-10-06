@@ -53,7 +53,7 @@ test('End to end test with product selection', async ({page})=>{
 
 })
 
-test.only("Java popup and hoverover and frame", async ({page})=>{
+test("Java popup and hoverover and frame", async ({page})=>{
   await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
   await page.locator('#mousehover').hover()
   await page.getByRole('link', {name: 'Reload', exact: true}).click()
